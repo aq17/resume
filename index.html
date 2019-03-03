@@ -3,9 +3,10 @@
 <head>
   <title>Momiyama Yuzu</title>
   <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru|M+PLUS+Rounded+1c" rel="stylesheet">
-  <link rel="stylesheet" href="./reset.css" type="text/css">
-  <link rel="stylesheet" href="./style.css" type="text/css">
+  <link rel="stylesheet" href="./css/reset.css" type="text/css">
+  <link rel="stylesheet" href="./css/style.css" type="text/css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 <body>
   <div class="top-wrapper">
@@ -22,7 +23,7 @@
   <div class="btn-wrapper">
     <a href="#about">About Me!</a>
     <a href="#project">プロジェクト</a>
-    <a href="#dev">開発言語</a>
+    <!-- <a href="#dev">開発言語</a> -->
     <a href="#link">リンク</a>
   </div>
   <div class="about-wrapper" id="about">
@@ -40,28 +41,91 @@
   <div class="project-wrapper" id="project">
     <h2><i class="fas fa-project-diagram"></i>Project</h2>
     <hr>
-    <a><img src="./image/tiprint.png"></a>
-    <a><img src="./image/momee.png"></a>
-    <a><img src="./image/mifton.png"></a>
-    <a><img src="./image/zerogra.png"></a>
+    <div class="modal_wrap">
+      <input id="tiprint_trigger" type="checkbox">
+      <div class="modal_overlay">
+        <label for="tiprint_trigger" class="modal_trigger"></label>
+        <div class="modal_content">
+          <label for="tiprint_trigger" class="close_button">✖️</label>
+          <h3>Tiprint</h2>
+          <p>MinecraftBEの最先端の情報を集めるサイトとして2018年8月に立ち上げました。</p>
+          <p>トップクラスの技術を持つ執筆者が記事を寄稿し、毎日を目指し投稿しました。</p>
+          <p>その結果、半年間で 1000pv/日 や、独自コミュニティの100人突破などを達成しました。</p>
+          <p>リンク：<a href="http://tiprint.net">Tiprint</a></p>
+          <hr>
+          <p>開発：Wordpress(HTML/CSS/PHP) // 2018年8月~</p>
+          <p>開発者：樅山柚子、Yoshi</p>
+        </div>
+      </div>
+    </div>
+    <label for="tiprint_trigger" class="open_button"><img src="./image/tiprint.png"></label>
+    <div class="modal_wrap">
+      <input id="momee_trigger" type="checkbox">
+      <div class="modal_overlay">
+        <label for="momee_trigger" class="modal_trigger"></label>
+        <div class="modal_content">
+          <label for="momee_trigger" class="close_button">✖️</label>
+          <h3>もみやませいかつ</h2>
+          <p>IT技術をバトンのように受け渡すサイトに感銘を受け、思わず作ってしまいました。</p>
+          <p>今まで自分が学んだ技術を少しずつアウトプットできればいいなと考えています。</p>
+          <p>5分で手を動かし、10分で理解し、15分で学びを深めることをイメージして執筆しています。</p>
+          <p>リンク：<a href="http://momee.work">もみやませいかつ</a></p>
+          <hr>
+          <p>開発：Wordpress(HTML/CSS/PHP) // 2019年2月~</p>
+          <p>開発者：樅山柚子</p>
+        </div>
+      </div>
+    </div>
+    <label for="momee_trigger" class="open_button"><img src="./image/momee.png"></label>
+    <div class="modal_wrap">
+      <input id="mifton_trigger" type="checkbox">
+      <div class="modal_overlay">
+        <label for="mifton_trigger" class="modal_trigger"></label>
+        <div class="modal_content">
+          <label for="mifton_trigger" class="close_button">✖️</label>
+          <h3>Mifton</h2>
+          <p>Miftonは、MCBEのサービス集合体サービスです。</p>
+          <p>Mifton APIを提供し、BEサービス開発をさらに気軽なものへと変える試みです。</p>
+          <p>また、ユーザーは一点に纏まっているため、利用しやすいというメリットもあります。</p>
+          <p>現在開発中です。</p>
+          <hr>
+          <p>開発：Ruby on Rails(Slim/CSS/Ruby) // 2018年10月~</p>
+          <p>開発者：樅山柚子</p>
+        </div>
+      </div>
+    </div>
+    <label for="mifton_trigger" class="open_button"><img src="./image/mifton.png"></label>
+    <div class="modal_wrap">
+      <input id="zerogra_trigger" type="checkbox">
+      <div class="modal_overlay">
+        <label for="zerogra_trigger" class="modal_trigger"></label>
+        <div class="modal_content">
+          <label for="zerogra_trigger" class="close_button">✖️</label>
+          <h3>ぜろぐら。</h2>
+          <p>ぜろぐら。は、四方にノーツが駆け抜ける新感覚PC音ゲーです。</p>
+          <p>Life is Tech! SchoolのUnityコースに参加しているときに開発した作品です。</p>
+          <p>最終的に、スマートフォンに移植して開発を続けようと考えています。</p>
+          <p>リンク：<a href="https://unityroom.com/games/zerogra">ぜろぐら。</a></p>
+          <hr>
+          <p>開発：Unity(C#) // 2018年10月~2019年2月</p>
+          <p>開発者：樅山柚子</p>
+        </div>
+      </div>
+    </div>
+    <label for="zerogra_trigger" class="open_button"><img src="./image/zerogra.png"></label>
   </div>
-  <div class="dev-wrapper" id="dev">
+  
+  
+  
+
+  <!-- <div class="dev-wrapper" id="dev">
     <h2><i class="fas fa-desktop"></i>Development</h2>
     <hr>
-    <p>Java：初めて学んだプログラミング言語：中級者</p>
-    <p>Kotlin：Android開発に使っています：初学者</p>
-    <p>Python：Discord.py、計算処理に使っています：初学者</p>
-    <p>C/C++：競技プログラミング・CUIに使っています：初学者</p>
-    <p>Ruby：Miftonの開発・CUIに使っています：中級者</p>
-    <p>Rust：coreVerseで使う予定のため勉強しています：初学者</p>
-    <p>HTML/CSS：何においても使います：中級者</p>
-    <p>JavaScript：わかりあえる日が来るとは思えません：初学者</p>
-    <p>C#：Zerograの開発・VS開発に使っています：中級者</p>
-    <p>Haskell：知り合いに勧められましたが難しいです：初学者</p>
-    <p>Swift：言語仕様がとても好きな言語です：中級者</p>
-    <p>PHP：Tiprintの開発。とても読みづらいです：初学者</p>
-    <p>フレームワーク：全て初学者なので省略</p>
-  </div>
+    <p>Tiprint >> Wordpress(PHP/HTML/SCSS)</p>
+    <p>もみやませいかつ >> Wordpress(PHP/HTML/SCSS)</p>
+    <p>Zerogra >> Unity(C#)</p>
+    <p>Mifton >> Ruby on Rails(Ruby/Slim/SCSS)</p>
+  </div> -->
   <div class="link" id="link">
     <h2><i class="fas fa-link"></i>Link</h2>
     <hr>

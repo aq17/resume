@@ -20,25 +20,6 @@ hr{
   border: 2px black solid;
 }
 
-header{
-  height:50px;
-  nav{
-    
-    
-    
-  }
-  ul{
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    li{
-      margin: 3px 10px;
-    }
-    
-  }
-}
-
 .top-wrapper {
   text-align: center;
   img{
@@ -108,7 +89,7 @@ header{
   }
   
   hr{
-    width: 500px;
+    width: 600px;
   }
   
   img{  
@@ -183,5 +164,81 @@ header{
   color: #fff;
 }
 .scroll-top:hover {
+  cursor: pointer;
+}
+
+footer{
+  p{
+    text-align: center;
+  }
+}
+
+
+.modal_wrap input{
+    display: none;
+}
+
+.modal_overlay{
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    opacity: 0;
+    transition: opacity 0.5s, transform 0s 0.5s;
+    transform: scale(0);
+}
+
+.modal_trigger{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.modal_content{
+    align-self: center;
+    width: 60%;
+    height: 40%;
+    max-width: 800px;
+    padding: 30px 30px 15px;
+    box-sizing: border-box;
+    background: #fff;
+    line-height: 1.8em;
+    transform: scale(0.3);
+    transition: 0.5s;
+    h3{
+      font-size: 40px;
+      margin-bottom: 30px;
+    }
+    hr{
+      width: 90%;
+      border: 0.5px black solid;
+    }
+}
+
+.close_button{
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal_wrap input:checked ~ .modal_overlay{
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.5s;
+}
+
+.modal_wrap input:checked ~ .modal_overlay .modal_content{
+    transform: scale(1);
+}
+
+.open_button{
   cursor: pointer;
 }
